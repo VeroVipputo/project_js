@@ -67,6 +67,9 @@ function mostrarConceptos() {
         //propiedad lenght aplicado al array
         console.log(conceptos.length + "_ es la cantidad de objetos del Array");
         //Metodo para ordenar un array.
+        //Los objetos fueron declarados desordenados por id intencionalmente para luego ordenarlos
+        /*Observar que los objetos fueron ordenados por id* con el metodo sort*/
+
         conceptos.sort(function (a, b) {
                 if (a.id > b.id) {
                         return 1;
