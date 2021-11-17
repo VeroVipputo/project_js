@@ -32,11 +32,12 @@ sueldoVacaciones();
 /* Cálculo Aguinaldo*/
 
 //let sueldo = parseInt(prompt("Ingrese su sueldo bruto"));
-function aguinaldo(){ if (sueldo > 0 ){
+ function aguinaldo() {
+     if (sueldo > 0 )
         alert("Su sueldo bruto de aguinaldo es de: " + " " + sueldo / 2 ) 
-    }
-}
-aguinaldo();
+ };
+
+
 
 //--------------------------------------------------------------------------------
 /* OBJETOS */
@@ -55,19 +56,13 @@ let vacaciones = {
     descuento:   true                   ,
 }                            
 
-let aguinaldo  = {
+let sac  = {
     tipo:        "remunerativo"         ,
-    baseCalculo: "ultimaRemuneracion"   ,
+    baseCalculo: "ultima semestre"   ,
     cantidad:    "segun antiguedad"     ,
     descuento:   true                   ,     
 }
 
-function baseDeCalculo(tipo, baseCalculo, cantidad, descuento) {
-    this.tipo        = tipo;
-    this.baseCalculo = baseCalculo;
-    this.cantidad    = cantidad;
-    this.descuento   = descuento;
-} 
              
 let horasExtras50 = {
     tipo:        "remunerativo"         ,
@@ -86,4 +81,4 @@ let horasExtras100 = {
 
 console.log(horasExtras50);
 console.log("tipo", horasExtras50.tipo);
-console.log("El calculo del aguinaldo es"+ " "+aguinaldo.tipo +" x "+ aguinaldo.baseCalculo );
+console.log("El calculo del aguinaldo es"+ " "+ sac.tipo +" x "+ sac.baseCalculo );
