@@ -37,7 +37,7 @@ sueldoVacaciones();
         alert("Su sueldo bruto de aguinaldo es de: " + " " + sueldo / 2 ) 
         return sueldo
  };
-
+aguinaldo();
 
 
 //--------------------------------------------------------------------------------
@@ -58,8 +58,8 @@ let vacaciones = {
 }                            
 
 let sac  = {
-    tipo:        "remunerativo"         ,
-    baseCalculo: "ultima semestre"   ,
+    tipo:        "mejor remuneracion"   ,
+    baseCalculo: "ultimo semestre"   ,
     cantidad:    "segun antiguedad"     ,
     descuento:   true                   ,     
 }
@@ -82,4 +82,4 @@ let horasExtras100 = {
 
 console.log(horasExtras50);
 console.log("tipo", horasExtras50.tipo);
-console.log("El calculo del aguinaldo es"+ " "+ sac.tipo +" x "+ sac.baseCalculo );
+console.log("El calculo del medio aguinaldo es"+ " "+ sac.tipo +" mensual del "+ sac.baseCalculo + " dividido 2");
