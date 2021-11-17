@@ -35,6 +35,7 @@ sueldoVacaciones();
  function aguinaldo() {
      if (sueldo > 0 )
         alert("Su sueldo bruto de aguinaldo es de: " + " " + sueldo / 2 ) 
+        return sueldo
  };
 
 

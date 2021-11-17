@@ -5,16 +5,16 @@ function mostrarConceptos() {
         conceptos = [];
 
         conceptos = [
-                sueldo = class Sueldo {
-                        constructor(id, tipo, baseCalculo, cantidad, descuento) {
-                                this.id = id;
-                                this.tipo = tipo;
-                                this.baseCalculo = baseCalculo;
-                                this.cantidad = cantidad;
-                                this.descuento = descuento;
+                sueldo = {
+                        
+                        id : 0,
+                        tipo : "remunerativo",
+                        baseCalculo: "basico",
+                        cantidad: "dias trabajados",
+                        descuento: true
 
-                        }
-                },
+                        },
+                
                 vacacionesNoGozadas = {
                         id: 5,
                         tipo: "No remunerativo",
@@ -63,7 +63,6 @@ function mostrarConceptos() {
         /*Creacion de Array conteniendo una coleccion de Objetos utiles en el proyecto.
        Estos conforman los conceptos. Objetos fundamentales para la realizacion de calculos del proyecto.*/
         console.log(conceptos);
-        console.table(conceptos);
 
         //propiedad lenght aplicado al array
         console.log(conceptos.length + "_ es la cantidad de objetos del Array");
