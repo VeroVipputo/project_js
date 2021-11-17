@@ -83,3 +83,4 @@ let horasExtras100 = {
 console.log(horasExtras50);
 console.log("tipo", horasExtras50.tipo);
 console.log("El calculo del medio aguinaldo es"+ " "+ sac.tipo +" mensual del "+ sac.baseCalculo + " dividido 2");
+
