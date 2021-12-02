@@ -47,3 +47,8 @@ img{
     height: 200px;
     background-color: var(--amarillo);
 }
+.form-control input {
+    color: green;
+    font-size: 24px;
+
+}
