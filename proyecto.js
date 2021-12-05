@@ -52,7 +52,9 @@ boton50.addEventListener("click", extrasFifth);
 let topay;
 function extrasFifth() {
      topay = salario / 200 * fiftyex * 1.5;
+     let container3 = document.querySelector("#totalex");
      console.log(topay);
+     container3.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${topay} `;
     return topay;
 }
 
