@@ -68,19 +68,25 @@
       </form>
       <h2>calculadora de aguinaldo</h2>
       <form action="" class="formulario">
-        <label for="basic-url" class="form-label">Ingrese cantidad de días trabajados en el semestre</label>
+        <label for="basic-url" class="form-label">Ingrese cantidad de meses trabajados en el semestre</label>
         <div class="input-group mb-3">
-          <span class="input-group-text" id="dias">Cantidad de días</span>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          <span class="input-group-text" id="dias">Cantidad de meses</span>
+          <input type="text" class="form-control" id="trabajados" aria-describedby="basic-addon3">
         </div>
-        <label for="basic-url" class="form-label">Remuneración Normal y habitual del último semestre</label>
+        <label for="basic-url" class="form-label">Mejor remuneración del último semestre</label>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="sueldo">
+          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="sac">
           <span class="input-group-text">.00</span>
         </div>
+        <label for="basic-url" class="form-label">Resultados</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">mostrar resultados</span>
+          <input type="text" class="form-control" id="sac2" type="number" onkeypress="validar(event)" aria-describedby="basic-addon3">
+        </div>
+        
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary" type="button"id ="calcular" onclick= "Aguinaldo()" >Calcular</button>
+          <button class="btn btn-primary" type="button"id ="calculo" onclick= "Aguinaldo()" >Calcular</button>
         </div>
       </form>
       <h2>calculadora de horas extras</h2>
@@ -88,7 +94,7 @@
         <label for="basic-url" class="form-label">Ingrese la cantidad de horas extras al 50%</label>
         <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon3">Cantidad de horas al 50% trabajadas</span>
-          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+          <input type="number" class="form-control" id="fiftyex" aria-describedby="basic-addon3">
         </div>
         <label for="basic-url" class="form-label">Remuneración Bruta</label>
         <div class="input-group mb-3">
@@ -97,7 +103,7 @@
           <span class="input-group-text">.00</span>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary" type="button">Calcular</button>
+          <button class="btn btn-primary" type="button" id="boton50">Calcular</button>
         </div>
       </form>
 
