@@ -39,9 +39,9 @@ function diasVacaciones() {
         container.outerHTML = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 14}) `;
 
     } else if (antiguedad >= 6 & antiguedad <= 10) {
-        console.log("Ud tiene 21 días de vacaciones");
         resultado = salario / 25 * 21;
         container.outerHTML = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 21}) `;
+        console.log("Ud tiene 21 días de vacaciones" + `monto a cobrar de plus vacacional es de $` + resultado);
     } else if (antiguedad >= 11 & antiguedad <= 28) {
         console.log("Ud tiene 28 días de vacaciones");
         resultado = salario / 25 * 28;
@@ -64,7 +64,7 @@ const Aguinaldo = () => {
  
     calculo = sac / 12 * trabajados ;
     let container2 = document.querySelector("#sac2");
-    console.log(calculo);
+    console.log(`monto a pagar en aguinaldo $ ` + calculo);
     container2.outerHTML = ` SU CORRESPONDIENTE MEDIO AGUINALDO ES DE $ (${calculo}) `;
     return calculo
 };
@@ -77,10 +77,11 @@ let topay;
 function extrasFifth() {
      topay = salario / 200 * fiftyex * 1.5;
      let container3 = document.querySelector("#totalex");
-     console.log(topay);
+     console.log(`monto a pagar en horas extras $ `+ topay);
      container3.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${topay} `;
     return topay;
 }
+
 
 
 
