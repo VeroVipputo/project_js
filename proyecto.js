@@ -1,3 +1,30 @@
+let listaUsuarios = [];
+
+class Usuario{
+    constructor(nombre, dni){
+        this.nombre = nombre;
+        this.dni    = dni   ;
+    }
+
+}
+
+
+function agregarUsuario(){
+    let nombreUsuario = document.getElementById("usuario");
+    let dni     = document.getElementById("id");
+    listaUsuarios.push(new Usuario(nombreUsuario.value , dni.value));
+    let usuarioJSON = JSON.stringify( listaUsuarios);
+    localStorage.setItem("usuario", usuarioJSON);
+}
+
+function mostrarUsuarios(){
+        let datosUsuarios = JSON.parse(localStorage.getItem("usuario"));
+        for (let usuario of datosUsuarios){
+            console.log("El usuario registrado es: "+ usuario.nombre);
+            console.log("Y el dni es: "+ usuario.mail);
+        }
+
+}
 
    let antiguedad = document.getElementById("antiguedad").value;
    let salario = document.getElementById("salario").value;
@@ -37,16 +64,13 @@ const Aguinaldo = () => {
  
     calculo = sac / 12 * trabajados ;
     let container2 = document.querySelector("#sac2");
-    console.log("Respuesta evento Aguinaldo");
     console.log(calculo);
     container2.outerHTML = ` SU CORRESPONDIENTE MEDIO AGUINALDO ES DE $ (${calculo}) `;
     return calculo
 };
 
 let fiftyex = document.getElementById("fiftyex").value;
-window.addEventListener("keydown", function(e){
-    console.log(e.key);
-})
+
 let boton50 = document.getElementById("boton50");
 boton50.addEventListener("click", extrasFifth);
 let topay;
@@ -98,5 +122,3 @@ let horasExtras100 = {
     cantidad:    2                      ,
     descuento:   true                   
 };
-/*window.addEventListener("keydown", function(e){
-    console.log(e.key);})*/
