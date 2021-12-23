@@ -1,30 +1,28 @@
 let listaUsuarios = [];
 
-class Usuario{
-    constructor(nombre, dni){
-        this.nombre = nombre;
-        this.dni    = dni   ;
-    }
 
-}
 
 
 function agregarUsuario(){
     let nombreUsuario = document.getElementById("usuario");
     let dni     = document.getElementById("id");
-    listaUsuarios.push(new Usuario(nombreUsuario.value , dni.value));
+    listaUsuarios.push(new Usuario(nombreUsuario.value , dni.value, antiguedad.value));
     let usuarioJSON = JSON.stringify( listaUsuarios);
     localStorage.setItem("usuario", usuarioJSON);
+    
 }
 
 function mostrarUsuarios(){
         let datosUsuarios = JSON.parse(localStorage.getItem("usuario"));
         for (let usuario of datosUsuarios){
             console.log("El usuario registrado es: "+ usuario.nombre);
-            console.log("Y el dni es: "+ usuario.mail);
+            console.log("Y el dni es: "+ usuario.dni);
         }
+       
 
-}
+    
+    }
+
 
    let antiguedad = document.getElementById("antiguedad").value;
    let salario = document.getElementById("salario").value;
@@ -33,11 +31,12 @@ function mostrarUsuarios(){
     
 function diasVacaciones() {
     let container = document.querySelector("#dias");
+    
     if ( antiguedad <= 5) {
         console.log("usted tiene 14 dias de vacaciones");
         resultado = salario / 25 * 14;
         container.outerHTML = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 14}) `;
-
+        
     } else if (antiguedad >= 6 & antiguedad <= 10) {
         resultado = salario / 25 * 21;
         container.outerHTML = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 21}) `;
@@ -82,7 +81,27 @@ function extrasFifth() {
     return topay;
 }
 
+let hundredex = document.getElementById("hundredex").value;
 
+let boton100 = document.getElementById("boton100");
+boton100.addEventListener("click", extrasHundred);
+let payto;
+function extrasHundred() {
+     payto = salario / 200 * hundredex * 2;
+     let container4 = document.querySelector("#totalex2");
+     console.log(`monto a pagar en horas extras $ `+ topay);
+     container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
+    return payto;
+}
+//const showmePay = () => salario.getElementById("salario").value;
+class Usuario{
+    constructor(nombre, dni, antiguedad){
+        this.nombre = nombre;
+        this.dni    = dni   ;
+        this.antiguedad= antiguedad;
+    }
+
+}
 
 
 //--------------------------------------------------------------------------------

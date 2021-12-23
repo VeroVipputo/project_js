@@ -10,6 +10,8 @@ h1, h2{
     margin-top: 20px;
 }
 main{
+    width: 100%;
+    height: auto;
     margin-bottom: 300px;
 }
 .carousel-item{
@@ -33,22 +35,98 @@ img{
 }
 .formulario{
     display: grid;
-    width: 80%;
-    margin: 70px;
+    height: auto;
+    width: 100%;
+    margin: 10px;
 }
 .btn{
     background: var(--rojo) !important;
     border: unset;
     border-radius: 20px;
     text-align: center;
-    
-}
-.pie{
-    height: 200px;
-    background-color: var(--amarillo);
-}
+    }
+
+
 .form-control input {
     color: green;
     font-size: 24px;
+}
 
+.grilla{
+    display: grid;
+    grid-template-columns: 20% 15% 20% 15% 15% 15% ;
+    grid-template-rows: 
+                        5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-areas: "    .       .       .     title       .       .       .  "
+                         " Header  Header  Header   Header   Header  Header  Header"
+                         " Concepto  Unidad  Base  Remunerativo  noRemunerativo  Descuento"
+                         "basico      "
+                         "Antiguedad "
+                         "Horas Extras 50% "
+                         "Horas Extras 100% "
+                         "Sac"
+                         "Plus Vacasional"
+                         "jubilacion"
+                         "Ley 19032"
+                         "Obra Social"
+                         "Aporte Sindical";
+    
+    padding: auto;
+
+
+}
+
+
+  .paydetail{
+      color: black;
+      font-style: bold;
+      font-size: 2rem;
+      justify-content: center;
+      text-align: center;
+  } 
+  .recibosueldofull{
+            width: 80%;
+            height: auto;
+            justify-content: center;
+            margin: 3% 10% 10% 5%;
+
+  }
+.header{
+    display: grid;
+    grid-area: "header";
+    
+    
+    padding-left: 1.5rem;
+    grid-template-columns: 20%;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    background-color: cyan;
+    width: 100%;
+    height: auto;
+}
+.concepto{
+    display: grid;
+    grid-area: "concepto";
+    padding-left: 1.5rem;
+    color: darkblue;
+    font-size: 1rem;
+}
+.sub{
+    display: grid;
+    grid-template-rows: 100%;
+    background-color: cyan;
+    height: 2rem;
+    justify-content: end;
+    padding-right: 25%;
+    font-size: 1.3rem;
+    font-style: bold;
+}
+.neto{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    background-color: cyan;
+    height: 3rem;
+    justify-content: end;
+    padding-right: 10%;
+    font-size: 1.5rem;
+    font-style: bold;
 }
