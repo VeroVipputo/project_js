@@ -1,7 +1,9 @@
+
+$(() => {
+    console.log('El DOM está listo');
+});
+
 let listaUsuarios = [];
-
-
-
 
 function agregarUsuario(){
     let nombreUsuario = document.getElementById("usuario");
@@ -94,52 +96,9 @@ function extrasHundred() {
      container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
     return payto;
 }
-//const showmePay = () => salario.getElementById("salario").value;
-class Usuario{
-    constructor(nombre, dni, antiguedad){
-        this.nombre = nombre;
-        this.dni    = dni   ;
-        this.antiguedad= antiguedad;
-    }
 
-}
-
-
-//--------------------------------------------------------------------------------
-/* OBJETOS */
-
-let vacacionesNoGozadas = {
-    tipo:        "No remunerativo"      ,
-    baseCalculo: "mejor remuneracion del semestre",
-    cantidad:    "segun antiguedad"     ,
-    descuento:   false                  
-}
-
-let vacaciones = {
-    tipo:        "remunerativo"         ,
-    baseCalculo: "ultimaRemuneracion"   ,
-    cantidad:    "segun antiguedad"     ,
-    descuento:   true                   
-}                            
-
-let tac  = {
-    tipo:        "mejor remuneracion"   ,
-    baseCalculo: "ultimo semestre"   ,
-    cantidad:    "segun antiguedad"     ,
-    descuento:   true                      
-}
-
-             
-let horasExtras50 = {
-    tipo:        "remunerativo"         ,
-    baseCalculo: "sueldo basico"        ,
-    cantidad:    1.5                    ,
-    descuento:   true                                    
-}                                       
-
-let horasExtras100 = {
-    tipo:        "remunerativo"         ,
-    baseCalculo: "sueldo basico"        ,
-    cantidad:    2                      ,
-    descuento:   true                   
-};
+$("#mostrar").click(function(){
+    $("#recibofinal").toggle(2000);
+    $("#conceptos").fadeToggle(2000);
+    
+    });
