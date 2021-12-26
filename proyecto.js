@@ -26,7 +26,7 @@ function mostrarUsuarios(){
 
    let antiguedad = document.getElementById("antiguedad").value;
    let salario = document.getElementById("salario").value;
-   $("#r_1_1").append(` ${salario.value}`);
+   $("#linea1").show(` ${salario.val}`);
     let container;
     let resultado;
     
