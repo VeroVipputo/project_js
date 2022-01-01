@@ -54,22 +54,11 @@ img{
 
 .grilla{
     display: grid;
-    grid-template-columns: 20% 15% 20% 15% 15% 15% ;
-    grid-template-rows: 
-                        5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-    grid-template-areas: 
+    grid-template-columns: 20% 15% 10% 25% 15% 15% ;
+    grid-template-areas:    
                          
                          " Concepto  Unidad  Base  Remunerativo  noRemunerativo  Descuento"
-                         "basico      "
-                         "Antiguedad "
-                         "Horas Extras 50% "
-                         "Horas Extras 100% "
-                         "Sac"
-                         "Plus Vacasional"
-                         "jubilacion"
-                         "Ley 19032"
-                         "Obra Social"
-                         "Aporte Sindical";
+                  
 }
 
 
@@ -80,17 +69,20 @@ img{
       text-align: center;
   } 
   .recibosueldofull{
-            width: 80%;
+            
+            width: 100%;
             height: auto;
             justify-content: center;
-            margin: 3% 10% 10% 5%;
+           
 
   }
+  
 .header{
+    
     display: grid;
-    padding-left: 1.5rem;
-    grid-template-columns: 20%;
-    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    padding-left: 1rem;
+    
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
     background-color: cyan;
     width: 100%;
     height: auto;
@@ -100,12 +92,24 @@ img{
     padding-left: 1.5rem;
     color: darkblue;
     font-size: 1rem;
+    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+   
 }
 #linea1{
     display: grid;
-    
-    color: darkblue;
-    font-size: 1rem;
+    grid-row: 3;
+
+}
+#r_2_1{
+    padding-left: 1.5rem;
+}
+#linea7{
+    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+   
+}
+#r_7_5{
+    padding-left: 2rem; 
 }
 .sub{
     display: grid;

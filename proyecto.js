@@ -27,8 +27,8 @@ function mostrarUsuarios(){
 
 
    let antiguedad = document.getElementById("antiguedad").value;
-   let salario = document.getElementById("salario").value;
-   $("#linea1").show(` ${salario.val}`);
+    salario = document.getElementById("salario").value;
+   
     let container;
     let resultado;
     
@@ -96,9 +96,17 @@ function extrasHundred() {
      container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
     return payto;
 }
-
+ 
 $("#mostrar").click(function(){
-    $("#recibofinal").toggle(2000);
-    $("#conceptos").fadeToggle(2000);
-    
+       
+    $("#recibofinal").fadeToggle(2000);
+    $("#conceptos").toggle(2000);
+
+    let muestrasueldo = document.querySelector("#r_1_3")
+    muestrasueldo.textContent= `$${salario}`;
+    let muestraAntiguedad = document.querySelector("#r_2_1")
+    muestraAntiguedad.textContent= `${antiguedad}`+`  `+`años`;
+    let jubilacion =document.querySelector("#r_7_5");
+    jubilacion.textContent= `${salario*(0.11)}`;
+  
     });
