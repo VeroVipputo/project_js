@@ -103,10 +103,10 @@ $("#mostrar").click(function(){
     $("#conceptos").toggle(2000);
 
     let muestrasueldo = document.querySelector("#r_1_3")
-    muestrasueldo.textContent= `$${salario}`;
+    muestrasueldo.textContent= `$ ${salario}`;
     let muestraAntiguedad = document.querySelector("#r_2_1")
     muestraAntiguedad.textContent= `${antiguedad}`+`  `+`años`;
     let jubilacion =document.querySelector("#r_7_5");
-    jubilacion.textContent= `${salario*(0.11)}`;
+    jubilacion.textContent= `$ ${salario*(0.11)}`;
   
     });
