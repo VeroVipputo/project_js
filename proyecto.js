@@ -112,4 +112,8 @@ $("#mostrar").click(function(){
     ley19032.textContent= `$ ${salario*(0.03)}`;
     let obraSocial= document.querySelector("#r_9_5");
     obraSocial.textContent=`$ ${salario*(0.03)}`;
+    let aporteSindical= document.querySelector("#r_10_5");
+    aporteSindical.textContent=`$ ${salario*(0.02)}`;
+
+
     });
