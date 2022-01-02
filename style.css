@@ -111,6 +111,13 @@ img{
 #r_7_5{
     padding-left: 2rem; 
 }
+#r_8_5{
+    padding-left: 2rem;
+}
+#r_9_5{
+    padding-left: 2rem
+    };
+
 .sub{
     display: grid;
     grid-template-rows: 100%;

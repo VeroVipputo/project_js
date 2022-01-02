@@ -108,5 +108,8 @@ $("#mostrar").click(function(){
     muestraAntiguedad.textContent= `${antiguedad}`+`  `+`años`;
     let jubilacion =document.querySelector("#r_7_5");
     jubilacion.textContent= `$ ${salario*(0.11)}`;
-  
+    let ley19032= document.querySelector("#r_8_5");
+    ley19032.textContent= `$ ${salario*(0.03)}`;
+    let obraSocial= document.querySelector("#r_9_5");
+    obraSocial.textContent=`$ ${salario*(0.03)}`;
     });
