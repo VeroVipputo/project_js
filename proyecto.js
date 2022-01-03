@@ -92,7 +92,7 @@ let payto;
 function extrasHundred() {
      payto = salario / 200 * hundredex * 2;
      let container4 = document.querySelector("#totalex2");
-     console.log(`monto a pagar en horas extras $ `+ topay);
+     console.log(`monto a pagar en horas extras $ `+ payto);
      container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
     return payto;
 }
@@ -117,8 +117,9 @@ $("#mostrar").click(function(){
     obraSocial.textContent=`$ ${salario*(0.03)}`;
     let aporteSindical= document.querySelector("#r_10_5");
     aporteSindical.textContent=`$ ${salario*(0.02)}`;
-    //let topay= document.querySelector("r_3_4");
-    //topay.textContent= `$ ${salario / 200 * fiftyex * 1.5}`;
-
+    let extrasFifth = document.getElementById("r_3_4");
+    extrasFifth.textContent = `$ ${salario / 200 * fiftyex * 1.5}`;
+    let payto = document.getElementById("r_4_4");
+    payto.textContent = `$ ${salario / 200 * hundredex * 2}`;
 
     });

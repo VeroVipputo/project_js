@@ -104,6 +104,12 @@ img{
 #r_2_1{
     padding-left: 1.5rem;
 }
+#r_3_4{
+    padding-left: 2rem;
+}
+#r_4_4{
+    padding-left: 2rem;
+}
 #linea7{
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
    
@@ -123,9 +129,10 @@ img{
 .sub{
     display: grid;
     grid-template-rows: 100%;
+    grid-template-columns: 25% 25% 25% 25%;
     background-color: cyan;
     height: 2rem;
-    justify-content: end;
+    justify-content:center;
     padding-right: 25%;
     font-size: 1.3rem;
 }
