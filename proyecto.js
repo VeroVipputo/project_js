@@ -98,7 +98,10 @@ function extrasHundred() {
 }
  
 $("#mostrar").click(function(){
-       
+    
+    $("#recibofinal").hide();
+    $("#conceptos").hide();
+
     $("#recibofinal").fadeToggle(2000);
     $("#conceptos").toggle(2000);
 
@@ -114,6 +117,8 @@ $("#mostrar").click(function(){
     obraSocial.textContent=`$ ${salario*(0.03)}`;
     let aporteSindical= document.querySelector("#r_10_5");
     aporteSindical.textContent=`$ ${salario*(0.02)}`;
+    //let topay= document.querySelector("r_3_4");
+    //topay.textContent= `$ ${salario / 200 * fiftyex * 1.5}`;
 
 
     });
