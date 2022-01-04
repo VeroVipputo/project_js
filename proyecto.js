@@ -121,5 +121,7 @@ $("#mostrar").click(function(){
     extrasFifth.textContent = `$ ${salario / 200 * fiftyex * 1.5}`;
     let payto = document.getElementById("r_4_4");
     payto.textContent = `$ ${salario / 200 * hundredex * 2}`;
+   // let descuentos = document.querySelector("#sub_2");
+    //descuentos.textContent = `$ ${jubilacion - ley19032 - obraSocial - aporteSindical}`;
 
     });
