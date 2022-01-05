@@ -17,8 +17,8 @@ $(document).ready(function(){
 $("#formulario").submit(function(e){
     e.preventDefault();
 
-    let nombreUsuario = {
-        nombreUsuario: $('input[name="usuario"]').val(),
+    let usuario = {
+        usuario: $('input[name="usuario"]').val(),
         dni: $('input[name="id"]').val(),
      };
      console.log(usuario);
