@@ -6,10 +6,10 @@ $(() => {
 let listaUsuarios = [];
 
 function agregarUsuario(){
-    let nombreUsuario = document.getElementById("usuario");
+    let listaUsuarios = document.getElementById("usuario");
     let dni     = document.getElementById("id");
-    listaUsuarios.push(new Usuario(nombreUsuario.value , dni.value, antiguedad.value));
-    let usuarioJSON = JSON.stringify( listaUsuarios);
+    listaUsuarios.setItem((nombreUsuario.value , dni.value, antiguedad.value));
+    let usuarioJSON = JSON.stringify(listaUsuarios);
     localStorage.setItem("usuario", usuarioJSON);
     
 }
