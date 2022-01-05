@@ -5,27 +5,6 @@ $(() => {
 
 let listaUsuarios = [];
 
-function agregarUsuario(){
-    let listaUsuarios = document.getElementById("usuario");
-    let dni     = document.getElementById("id");
-    listaUsuarios.setItem((nombreUsuario.value , dni.value, antiguedad.value));
-    let usuarioJSON = JSON.stringify(listaUsuarios);
-    localStorage.setItem("usuario", usuarioJSON);
-    
-}
-
-function mostrarUsuarios(){
-        let datosUsuarios = JSON.parse(localStorage.getItem("usuario"));
-        for (let usuario of datosUsuarios){
-            console.log("El usuario registrado es: "+ usuario.nombre);
-            console.log("Y el dni es: "+ usuario.dni);
-        }
-       
-
-    
-    }
-
-
    let antiguedad = document.getElementById("antiguedad").value;
     salario = document.getElementById("salario").value;
    
