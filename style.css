@@ -51,6 +51,10 @@ img{
     color: green;
     font-size: 24px;
 }
+#datos{
+    padding: 8px;
+    justify-content: center;
+}
 
 .grilla{
     display: grid;
