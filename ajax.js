@@ -23,7 +23,8 @@ $("#formulario").submit(function(e){
      $.get($(this).attr("action"), usuario, function(response){
          response.data.forEach((element, index) => {
          console.log(response);
-         $("#datos").append("<div>"+element.first_name+""+element.last_name+"</div>");
+         $("#datos").append("<div>"+element.first_name+" "+element.last_name+ "</div>");
+         
         });
     });
        
