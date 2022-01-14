@@ -33,11 +33,22 @@ img{
     flex-direction: column;
     text-transform: uppercase;
 }
+#formulario1{
+    display: grid;
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+  
+}
 .formulario{
     display: grid;
     height: auto;
-    width: 100%;
-    margin: 10px;
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
 }
 .btn{
     background: var(--rojo) !important;
@@ -74,8 +85,10 @@ img{
   } 
   .recibosueldofull{
             
-            width: 100%;
+            width: 80%;
             height: auto;
+            margin-left: 10%;
+            margin-right: 10%;
             justify-content: center;
            
 
@@ -84,22 +97,27 @@ img{
 .header{
     
     display: grid;
-    padding-left: 1rem;
-    
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    background-color: cyan;
     width: 100%;
     height: auto;
+ 
+    grid-template-columns: 16.67% 16.67% 16.65% 16.67% 16.67% 16.67%;
+    background-color: cyan;
+    
 }
 .concepto{
     display: grid;
-    padding-left: 1.5rem;
+    padding-left: 0.5rem;
     color: darkblue;
     font-size: 1rem;
     grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
     grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
    
 }
+#mostrar{
+    margin-top: 5%;
+}
+
+
 #linea1{
     display: grid;
     grid-row: 3;
@@ -135,7 +153,7 @@ img{
 .sub{
     display: grid;
    
-    grid-template-columns: 33% 33% 34%;
+    grid-template-columns: 33% 33% 33%;
     background-color: cyan;
     height: 2rem;
     justify-content:flex-end;
