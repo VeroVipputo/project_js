@@ -90,7 +90,7 @@ img{
             margin-left: 10%;
             margin-right: 10%;
             justify-content: center;
-           
+            padding-bottom: 2rem;
 
   }
   
@@ -99,22 +99,26 @@ img{
     display: grid;
     width: 100%;
     height: auto;
- 
-    grid-template-columns: 16.67% 16.67% 16.65% 16.67% 16.67% 16.67%;
+    padding-left: 1rem;
+    grid-template-columns: 20% 15% 10% 25% 15% 15% ;
     background-color: cyan;
     
 }
 .concepto{
     display: grid;
     padding-left: 0.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     color: darkblue;
     font-size: 1rem;
     grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-columns: 20% 15% 10% 25% 15% 15% ;
    
 }
 #mostrar{
     margin-top: 5%;
+   
+    margin-bottom: 5%;
 }
 
 
@@ -133,7 +137,7 @@ img{
     padding-left: 2rem;
 }
 #linea7{
-    grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-columns: 20% 15% 10% 25% 15% 15% ;
    
 }
 #r_7_5{
@@ -152,7 +156,8 @@ img{
 
 .sub{
     display: grid;
-   
+    text-align:end;
+
     grid-template-columns: 33% 33% 33%;
     background-color: cyan;
     height: 2rem;

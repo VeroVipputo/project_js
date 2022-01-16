@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     
     $.get("https://reqres.in/api/users"),{page: 2}, function(response){
         response.data.array.forEach(element => {
@@ -29,4 +29,4 @@ $("#formulario").submit(function(e){
     });
        
     });
-});
+});*/
