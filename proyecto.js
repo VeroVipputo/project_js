@@ -102,4 +102,10 @@ $("#mostrar").click(function(){
     payto.textContent = `$ ${salario / 200 * hundredex * 2}`;
     let descuentos = document.querySelector("#sub_2");
     descuentos.textContent = `Descuentos $ ${salario*(0.11)+salario*(0.03)+salario*(0.03)+salario*(0.02) }`;
+    let bruto = document.querySelector("#sub_1");
+    bruto.textContent = `Bruto $ ${salario/ 200 * fiftyex * (1.5) + salario / 200 * hundredex * (2) + (+salario) }`;
+    let bruto2 = `${salario/ 200 * fiftyex * (1.5) + salario / 200 * hundredex * (2) + (+salario)}`;
+    let descuentos2 = `${salario*(0.11)+salario*(0.03)+salario*(0.03)+salario*(0.02)}`;
+    let neto = document.querySelector("#neto");
+    neto.textContent  = `NETO $ ${bruto2 - (descuentos2)}`;
 });
