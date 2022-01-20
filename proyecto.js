@@ -6,7 +6,7 @@ $(() => {
 let listaUsuarios = [];
 
    let antiguedad = document.getElementById("antiguedad").value;
-    salario = document.getElementById("salario").value;
+          salario = document.getElementById("salario").value;
    
     let container;
     let resultado;
