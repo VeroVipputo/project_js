@@ -88,7 +88,7 @@ $("#mostrar").click(function(){
     $("#displaymonth").toggle(2000);
 
     let mes = document.querySelector("#displaymonth")
-    mes.textContent= ` ${muestrames}`;
+    mes.textContent= `Mes de pago ${muestrames}`;
     
     let muestrasueldo = document.querySelector("#r_1_3")
     muestrasueldo.textContent= `$ ${salario}`;
