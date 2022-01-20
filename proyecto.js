@@ -5,9 +5,10 @@ $(() => {
 
 let listaUsuarios = [];
 
-   let antiguedad = document.getElementById("antiguedad").value;
-          salario = document.getElementById("salario").value;
-   
+    let antiguedad  = document.getElementById("antiguedad").value;
+    let     salario = document.getElementById("salario").value;
+    let     muestrames    = document.getElementById("mes").value;
+    let imputmes = document.getElementById("month");
     let container;
     let resultado;
     
@@ -80,10 +81,15 @@ $("#mostrar").click(function(){
     
     $("#recibofinal").hide();
     $("#conceptos").hide();
+    $("#displaymonth").hide();
 
     $("#recibofinal").fadeToggle(2000);
     $("#conceptos").toggle(2000);
+    $("#displaymonth").toggle(2000);
 
+    let mes = document.querySelector("#displaymonth")
+    mes.textContent= ` ${muestrames}`;
+    
     let muestrasueldo = document.querySelector("#r_1_3")
     muestrasueldo.textContent= `$ ${salario}`;
     let muestraAntiguedad = document.querySelector("#r_2_1")

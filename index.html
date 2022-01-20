@@ -48,7 +48,7 @@
       
       <form action="https://reqres.in/api/users" class="formulario1" id="formulario1" method="get">
         <h2>Datos de usuario</h2>
-        <label for="basic-url" class="form-label">Ingrese su usuario</label>
+        <label for="basic-url" class="form-label">Ingrese nombre completo</label>
         <div class="input-group mb-1">
           <span class="input-group-text" id="basic-addon3">Nombre y Apellido</span>
           <input   class="form-control" id="usuario" aria-describedby="basic-addon3">
@@ -67,7 +67,28 @@
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
           <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id= "salario">
-         
+        </div>
+          <label  type="" for="basic-url" class="form-label">Mes</label> 
+        <div class="input-group mb-3">
+            
+            <span class="input-group-text" id="basic-addon3">Periodo Abonado</span>
+            <input type="select" class="form-control" id="month" aria-describedby="basic-addon3">
+          <select id="mes">
+              <option value="0">Enero</option>
+              <option value="1">Febrero</option>
+              <option value="2">Marzo</option>
+              <option value="3">Abril</option>
+              <option value="4">Mayo</option>
+              <option value="5">Junio</option>
+              <option value="6">Julio</option>
+              <option value="7">Agosto</option>
+              <option value="8">Septiembre</option>
+              <option value="9">Octubre</option>
+              <option value="10">Noviembre</option>
+              <option value="11">Diciembre</option>
+            </select>
+            
+            
         </div>
 
         <div class="d-grid gap-2 col-3 mx-auto">
@@ -155,8 +176,8 @@
      
       <div class="paydetail">Recibo de Haberes</div>
       <div class="headrecibo">
-        <div>Periodo Abonado</div>
-        <div>Sueldo del mes </div>
+       
+        <div id="displaymonth">Sueldo del mes </div>
         <div>Apellido y Nombre</div>
 
       </div>
