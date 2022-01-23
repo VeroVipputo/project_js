@@ -3,15 +3,44 @@ $(() => {
     console.log('El DOM está listo');
 });
 
-let listaUsuarios = [];
 
-    let antiguedad  = document.getElementById("antiguedad").value;
-    let     salario = document.getElementById("salario").value;
-    let     muestrames    = document.getElementById("mes").value;
-    let imputmes = document.getElementById("month");
-    let container;
-    let resultado;
+
+let antiguedad  = document.getElementById("antiguedad").value;
+let     salarios = document.getElementById("salario").value;
+let     muestrames    = document.getElementById("mes").value;
+let     usuarios    = document.getElementById("usuario").value;
+let   dni = document.getElementById("id").value;
+let imputmes = document.getElementById("month");
+
+let container;
+let resultado;
+let listaUsuarios = [];
+let user = {
+        nombre:`${usuario.value}`,
+        dni: `${id.value}`,
+        salario:`${salario.value}`
+
+};
+
+    class Persona{
+            user = '';
+            dni     = '';
+            paga= '';
+        constructor(user, dni, paga){
+            this.user = user;
+            this.dni     = dni;
+            this.paga = paga;
+        }
+     quienSoy(){
+         console.log(user)
+        }; 
+
     
+    };
+    
+    
+    console.log(user);
+
 function diasVacaciones() {
     let container = document.querySelector("#dias");
     
@@ -82,14 +111,16 @@ $("#mostrar").click(function(){
     $("#recibofinal").hide();
     $("#conceptos").hide();
     $("#displaymonth").hide();
-
+    $("#displayname").hide();
     $("#recibofinal").fadeToggle(2000);
     $("#conceptos").toggle(2000);
     $("#displaymonth").toggle(2000);
+    $("#displayname").toggle(2000);
 
     let mes = document.querySelector("#displaymonth")
-    mes.textContent= `Mes de pago ${muestrames}`;
-    
+    mes.textContent= `Mes de pago: ${muestrames}`;
+    let persona = document.querySelector("#displayname")
+    persona.textContent= ` ${usuario}`;
     let muestrasueldo = document.querySelector("#r_1_3")
     muestrasueldo.textContent= `$ ${salario}`;
     let muestraAntiguedad = document.querySelector("#r_2_1")

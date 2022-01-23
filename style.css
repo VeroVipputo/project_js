@@ -110,6 +110,12 @@ img{
             
             
 }  
+#displaymonth{
+    margin: 3%;
+}
+#displayname{
+    margin: 3%;
+}
 .header{
     
     display: grid;
