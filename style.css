@@ -51,13 +51,29 @@ img{
     margin-right: 5%;
     float: left;
 }
+.aguilucho{
+    display: grid;
+    height: auto;
+    width: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    align-content: center;
+}
 .btn{
     background: var(--rojo) !important;
     border: unset;
     border-radius: 20px;
     text-align: center;
-    }
+    float: right;
 
+    }
+.btn #sueldo{
+    display: flex;
+    
+}
+.btn #save{
+    float: right;
+}
 .form-control {
     width: 50%;
 }
@@ -140,6 +156,8 @@ img{
 #mostrar{
     margin-top: 20%;
     margin-bottom: 5%;
+    background-color: chartreuse !important;
+    color: black;
     
 
 }

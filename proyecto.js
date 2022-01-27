@@ -3,6 +3,11 @@ $(() => {
     console.log('El DOM está listo');
 });
 
+if(typeof(Storage)!== 'undefined'){
+    console.log("local storage compatible");
+}else{
+    console.log("incompatible con local storage");
+    };
 
 
 let antiguedad  = document.getElementById("antiguedad").value;
@@ -11,62 +16,41 @@ let     muestrames    = document.getElementById("mes").value;
 let     usuarios    = document.getElementById("usuario").value;
 let   dni = document.getElementById("id").value;
 let imputmes = document.getElementById("month");
+let logueado = document.getElementById("datos");
+logueado.textContent= ` ${usuarios} Sus resultados puede verlos calculados en el recibo de Sueldo a continuación`;
 
 let container;
 let resultado;
-let listaUsuarios = [];
-let user = {
-        nombre:`${usuario.value}`,
-        dni: `${id.value}`,
-        salario:`${salario.value}`
+let nombreUsuario = [];
 
-};
-
-    class Persona{
-            user = '';
-            dni     = '';
-            paga= '';
-        constructor(user, dni, paga){
-            this.user = user;
-            this.dni     = dni;
-            this.paga = paga;
-        }
-     quienSoy(){
-         console.log(user)
-        }; 
-
-    
-    };
-    
-    
-    console.log(user);
+       
 
 function diasVacaciones() {
     let container = document.querySelector("#dias");
     
     if ( antiguedad <= 5) {
         console.log("usted tiene 14 dias de vacaciones");
-        resultado = salario / 25 * 14;
-        container.outerHTML = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 14}) `;
+        resultado = salarios / 25 * 14;
+        container.outerHTML = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 14}) `;
         
     } else if (antiguedad >= 6 & antiguedad <= 10) {
-        resultado = salario / 25 * 21;
-        container.outerHTML = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 21}) `;
+        resultado = salarios / 25 * 21;
+        container.outerHTML = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 21}) `;
         console.log("Ud tiene 21 días de vacaciones" + `monto a cobrar de plus vacacional es de $` + resultado);
     } else if (antiguedad >= 11 & antiguedad <= 28) {
         console.log("Ud tiene 28 días de vacaciones");
-        resultado = salario / 25 * 28;
-        container.outerHTML = ` ( USTED TIENE 28 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 28}) `;
+        resultado = salarios / 25 * 28;
+        container.outerHTML = ` ( USTED TIENE 28 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 28}) `;
     } else {
         console.log("usted tiene 35 dias de vacaciones");
-        resultado = salario / 25 * 35;
-        container.outerHTML = ` ( USTED TIENE 35 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salario / 25 * 35}) `;
+        resultado = salarios / 25 * 35;
+        container.outerHTML = ` ( USTED TIENE 35 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 35}) `;
     };
     return antiguedad & resultado
 }
 
-
-/* Cálculo Aguinaldo*/
+/*
+/* Cálculo Aguinaldo
 let trabajados = document.getElementById("trabajados").value;
 let sac = document.getElementById("sac").value;
  
@@ -78,7 +62,7 @@ const Aguinaldo = () => {
     console.log(`monto a pagar en aguinaldo $ ` + calculo);
     container2.outerHTML = ` SU CORRESPONDIENTE MEDIO AGUINALDO ES DE $ (${calculo}) `;
     return calculo
-};
+};*/
 
 let fiftyex = document.getElementById("fiftyex").value;
 
@@ -86,7 +70,7 @@ let boton50 = document.getElementById("boton50");
 boton50.addEventListener("click", extrasFifth);
 let topay;
 function extrasFifth() {
-     topay = salario / 200 * fiftyex * 1.5;
+     topay = salarios / 200 * fiftyex * 1.5;
      let container3 = document.querySelector("#totalex");
      console.log(`monto a pagar en horas extras $ `+ topay);
      container3.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${topay} `;
@@ -99,7 +83,7 @@ let boton100 = document.getElementById("boton100");
 boton100.addEventListener("click", extrasHundred);
 let payto;
 function extrasHundred() {
-     payto = salario / 200 * hundredex * 2;
+     payto = salarios / 200 * hundredex * 2;
      let container4 = document.querySelector("#totalex2");
      console.log(`monto a pagar en horas extras $ `+ payto);
      container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
@@ -112,6 +96,7 @@ $("#mostrar").click(function(){
     $("#conceptos").hide();
     $("#displaymonth").hide();
     $("#displayname").hide();
+  
     $("#recibofinal").fadeToggle(2000);
     $("#conceptos").toggle(2000);
     $("#displaymonth").toggle(2000);
@@ -120,29 +105,31 @@ $("#mostrar").click(function(){
     let mes = document.querySelector("#displaymonth")
     mes.textContent= `Mes de pago: ${muestrames}`;
     let persona = document.querySelector("#displayname")
-    persona.textContent= ` ${usuario}`;
+    persona.textContent= ` ${usuarios}`;
     let muestrasueldo = document.querySelector("#r_1_3")
-    muestrasueldo.textContent= `$ ${salario}`;
-    let muestraAntiguedad = document.querySelector("#r_2_1")
+    muestrasueldo.textContent= `$ ${salarios}`;
+    let muestraAntiguedad = document.querySelector("#r_2_1");
     muestraAntiguedad.textContent= `${antiguedad}`+`  `+`años`;
+    let muestraplus = document.querySelector("#r_6_4");
+    muestraplus.textContent = `$${salarios / 25 * 21}`;
     let jubilacion =document.querySelector("#r_7_5");
-    jubilacion.textContent= `$ ${salario*(0.11)}`;
+    jubilacion.textContent= `$ ${salarios*(0.11)}`;
     let ley19032= document.querySelector("#r_8_5");
-    ley19032.textContent= `$ ${salario*(0.03)}`;
+    ley19032.textContent= `$ ${salarios*(0.03)}`;
     let obraSocial= document.querySelector("#r_9_5");
-    obraSocial.textContent=`$ ${salario*(0.03)}`;
+    obraSocial.textContent=`$ ${salarios*(0.03)}`;
     let aporteSindical= document.querySelector("#r_10_5");
-    aporteSindical.textContent=`$ ${salario*(0.02)}`;
+    aporteSindical.textContent=`$ ${salarios*(0.02)}`;
     let extrasFifth = document.getElementById("r_3_4");
-    extrasFifth.textContent = `$ ${salario / 200 * fiftyex * 1.5}`;
+    extrasFifth.textContent = `$ ${salarios / 200 * fiftyex * 1.5}`;
     let payto = document.getElementById("r_4_4");
-    payto.textContent = `$ ${salario / 200 * hundredex * 2}`;
+    payto.textContent = `$ ${salarios / 200 * hundredex * 2}`;
     let descuentos = document.querySelector("#sub_2");
-    descuentos.textContent = `Descuentos $ ${salario*(0.11)+salario*(0.03)+salario*(0.03)+salario*(0.02) }`;
+    descuentos.textContent = `Descuentos $ ${salarios*(0.11)+salarios*(0.03)+salarios*(0.03)+salarios*(0.02) }`;
     let bruto = document.querySelector("#sub_1");
-    bruto.textContent = `Bruto $ ${salario/ 200 * fiftyex * (1.5) + salario / 200 * hundredex * (2) + (+salario) }`;
-    let bruto2 = `${salario/ 200 * fiftyex * (1.5) + salario / 200 * hundredex * (2) + (+salario)}`;
-    let descuentos2 = `${salario*(0.11)+salario*(0.03)+salario*(0.03)+salario*(0.02)}`;
+    bruto.textContent = `Bruto $ ${salarios/ 200 * fiftyex * (1.5) + salarios / 200 * hundredex * (2) + (+salarios) }`;
+    let bruto2 = `${salarios/ 200 * fiftyex * (1.5) + salarios / 200 * hundredex * (2) + (+salarios)}`;
+    let descuentos2 = `${salarios*(0.11)+salarios*(0.03)+salarios*(0.03)+salarios*(0.02)}`;
     let neto = document.querySelector("#neto");
     neto.textContent  = `NETO $ ${bruto2 - (descuentos2)}`;
 });

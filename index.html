@@ -25,7 +25,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="recibo.html" id="" >Recibo de Sueldo</a>
               <a class="nav-link" href="#">vacaciones</a>
-              <a class="nav-link" href="#">aguinaldo</a>
+              <a class="nav-link" href="aguinaldo.html">aguinaldo</a>
               <a class="nav-link disabled">Ultimas noticias</a>
             </div>
           </div>
@@ -92,7 +92,11 @@
         </div>
 
         <div class="d-grid gap-2 col-3 mx-auto">
-          <button   class="btn btn-primary" type="submit" id="sueldo">Enviar</button>
+          <button   class="btn btn-primary" type="submit"  onclick="agregarUsuario()"   id="sueldo">Enviar</button>
+         
+        </div>
+        <div class="d-grid gap-2 col-3 mx-auto">
+          <button   class="btn btn-primary" type="text"  onclick="guardarUsuario()"   id="save">guardar</button>
          
         </div>
         <div id="datos">
@@ -100,42 +104,7 @@
         </div>
       </form>
       
-      <form action="" class="formulario">
-        <h2>calculadora de plus vacacional</h2>
-
-        <label for="basic-url" class="form-label">Resultados</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3">mostrar resultados</span>
-          <input type="text" class="form-control" id="dias" aria-describedby="basic-addon3">
-        </div>
-        <div class="d-grid gap-2 col-3 mx-auto">
-          <button onclick= diasVacaciones()  class="btn btn-primary" type="button" id="sueldo">Calcular</button>
-        </div>
-      </form>
-      
-      <form action="" class="formulario">
-        <h2>calculadora de aguinaldo</h2>
-        <label for="basic-url" class="form-label">Ingrese cantidad de meses trabajados en el semestre</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="dias">Cantidad de meses</span>
-          <input type="text" class="form-control" id="trabajados" aria-describedby="basic-addon3">
-        </div>
-        <label for="basic-url" class="form-label">Mejor remuneración del último semestre</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="sac">
-          
-        </div>
-        <label for="basic-url" class="form-label">Resultados</label>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3">mostrar resultados</span>
-          <input type="text" class="form-control" id="sac2" type="number" onkeypress="validar(event)" aria-describedby="basic-addon3">
-        </div>
-        
-        <div class="d-grid gap-2 col-3 mx-auto">
-          <button class="btn btn-primary" type="button"id ="calculo" onclick= "Aguinaldo()" >Calcular</button>
-        </div>
-      </form>
+ 
       
       <form action="" class="formulario">
         <h2>calculadora de horas extras</h2>
@@ -169,8 +138,23 @@
           <button class="btn btn-primary" type="button" id="boton100">Calcular</button>
         </div>
       </form>
+      <form action="" class="formulario">
+        <h2>calculadora de plus vacacional</h2>
+
+        <label for="basic-url" class="form-label">Resultados</label>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon3">mostrar resultados</span>
+          <input type="text" class="form-control" id="dias" aria-describedby="basic-addon3">
+        </div>
+        <div class="d-grid gap-2 col-3 mx-auto">
+          <button onclick= diasVacaciones()  class="btn btn-primary" type="button" id="sueldo">Calcular</button>
+        </div>
+      </form>
+      
+   
+    </form>
       <div class="d-grid gap-2 col-4 mx-auto">
-        <button class="btn btn-primary" type="button" id="mostrar" onclick="" >Ver valores en el recibo</button>
+        <button class="btn btn-primary" type="button" id="mostrar" onclick="" >Ver Resultados en el recibo</button>
       </div>
     <div class="recibosueldofull">
      
@@ -220,7 +204,13 @@
           <div id="r_4_5"></div>
         </div>
         <div class="concepto" id="linea5">Sac</div>
-        <div class="concepto" id="linea6">Plus vacacional</div>
+        <div class="concepto" id="linea6">Plus vacacional
+          <div id="r_6_1"></div>
+          <div id="r_6_2"></div>
+          <div id="r_6_3"></div>
+          <div id="r_6_4"></div>
+          <div id="r_6_5"></div>
+        </div>
         <div class="concepto" id="linea7">Jubilación
         <div id="r_7_1"></div>
         <div id="r_7_2"></div>
@@ -273,18 +263,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="storage.js"></script>
     <script src="ajax.js"></script>
+    <script src="proyecto.js"></script>
+
     <style>
       #datos{
             border: 2px solid green;
             width: 80%;
-            height: 250px;
+            height: 100px;
             margin: 15px;
-
-
 
       }
     </style>
     <!--<script src="array.js"></script>-->
-    <script src="proyecto.js"></script>
+    
+    
 </body>
 </html>
