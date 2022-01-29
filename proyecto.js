@@ -1,5 +1,5 @@
 
-$(() => {
+    $(() => {
     console.log('El DOM está listo');
 });
 
@@ -16,27 +16,30 @@ let     muestrames    = document.getElementById("mes").value;
 let     usuarios    = document.getElementById("usuario").value;
 let   dni = document.getElementById("id").value;
 let imputmes = document.getElementById("month");
+imputmes.textContent= `${muestrames}`;
 let logueado = document.getElementById("datos");
-logueado.textContent= ` ${usuarios} Sus resultados puede verlos calculados en el recibo de Sueldo a continuación`;
+logueado.textContent= ` ${usuarios}, Sus resultados puede verlos calculados en el recibo de Sueldo a continuación. `;
 
-let container;
+
+
+
 let resultado;
 let nombreUsuario = [];
-
+let container = document.querySelector("#dias");
        
 
 function diasVacaciones() {
-    let container = document.querySelector("#dias");
+   
     
     if ( antiguedad <= 5) {
         console.log("usted tiene 14 dias de vacaciones");
         resultado = salarios / 25 * 14;
-        container.outerHTML = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 14}) `;
+        container.textContent = ` ( USTED TIENE 14 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 14}) `;
         
     } else if (antiguedad >= 6 & antiguedad <= 10) {
         resultado = salarios / 25 * 21;
-        container.outerHTML = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 21}) `;
-        console.log("Ud tiene 21 días de vacaciones" + `monto a cobrar de plus vacacional es de $` + resultado);
+        container.textContent = ` ( USTED TIENE 21 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 21}) `;
+        console.log("Ud tiene 21 días de vacaciones" + ` y el monto a cobrar de plus vacacional es de $` + resultado);
     } else if (antiguedad >= 11 & antiguedad <= 28) {
         console.log("Ud tiene 28 días de vacaciones");
         resultado = salarios / 25 * 28;
@@ -44,25 +47,12 @@ function diasVacaciones() {
     } else {
         console.log("usted tiene 35 dias de vacaciones");
         resultado = salarios / 25 * 35;
-        container.outerHTML = ` ( USTED TIENE 35 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 35}) `;
+        container.textContent = ` ( USTED TIENE 35 DIAS DE VACACIONES ) y el Plus vacacional es de $ (${salarios / 25 * 35}) `;
     };
     return antiguedad & resultado
 }
 
-/*
-/* Cálculo Aguinaldo
-let trabajados = document.getElementById("trabajados").value;
-let sac = document.getElementById("sac").value;
- 
-let calculo;
-const Aguinaldo = () => {  
- 
-    calculo = sac / 12 * trabajados ;
-    let container2 = document.querySelector("#sac2");
-    console.log(`monto a pagar en aguinaldo $ ` + calculo);
-    container2.outerHTML = ` SU CORRESPONDIENTE MEDIO AGUINALDO ES DE $ (${calculo}) `;
-    return calculo
-};*/
+
 
 let fiftyex = document.getElementById("fiftyex").value;
 
@@ -73,7 +63,7 @@ function extrasFifth() {
      topay = salarios / 200 * fiftyex * 1.5;
      let container3 = document.querySelector("#totalex");
      console.log(`monto a pagar en horas extras $ `+ topay);
-     container3.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${topay} `;
+     container3.textContent = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${topay} `;
     return topay;
 }
 
@@ -83,15 +73,18 @@ let boton100 = document.getElementById("boton100");
 boton100.addEventListener("click", extrasHundred);
 let payto;
 function extrasHundred() {
+    
      payto = salarios / 200 * hundredex * 2;
      let container4 = document.querySelector("#totalex2");
      console.log(`monto a pagar en horas extras $ `+ payto);
-     container4.outerHTML = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
+     container4.textContent = `  EL MONTO A COBRAR DE HORAS EXTRAS ES DE $ ${payto} `;
+     
     return payto;
 }
- 
+
 $("#mostrar").click(function(){
     
+
     $("#recibofinal").hide();
     $("#conceptos").hide();
     $("#displaymonth").hide();
@@ -110,8 +103,7 @@ $("#mostrar").click(function(){
     muestrasueldo.textContent= `$ ${salarios}`;
     let muestraAntiguedad = document.querySelector("#r_2_1");
     muestraAntiguedad.textContent= `${antiguedad}`+`  `+`años`;
-    let muestraplus = document.querySelector("#r_6_4");
-    muestraplus.textContent = `$${salarios / 25 * 21}`;
+  
     let jubilacion =document.querySelector("#r_7_5");
     jubilacion.textContent= `$ ${salarios*(0.11)}`;
     let ley19032= document.querySelector("#r_8_5");

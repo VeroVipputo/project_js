@@ -24,9 +24,8 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="recibo.html" id="" >Recibo de Sueldo</a>
-              <a class="nav-link" href="#">vacaciones</a>
-              <a class="nav-link" href="aguinaldo.html">aguinaldo</a>
-              <a class="nav-link disabled">Ultimas noticias</a>
+              
+              
             </div>
           </div>
         </div>
@@ -46,12 +45,12 @@
         </div>
       </div>
       
-      <form action="" class="formulario1" id="formulario1" method="get">
+      <form action="" class="formulario1" id="formulario1" method="GET" action="mailto:veronica.vipputo@gmail.com" enctype="text/plain">
         <h2>Datos de usuario</h2>
         <label for="basic-url" class="form-label">Ingrese nombre completo</label>
         <div class="input-group mb-1">
           <span class="input-group-text" id="basic-addon3">Nombre y Apellido</span>
-          <input   class="form-control" id="usuario" aria-describedby="basic-addon3">
+          <input   class="form-control" id="usuario" aria-describedby="basic-addon3" type="Text" value="" >
         </div>
         <label for="basic-url" class="form-label">DNI</label>
         <div class="input-group mb-3">
@@ -92,11 +91,11 @@
         </div>
 
         <div class="d-grid gap-2 col-3 mx-auto">
-          <button   class="btn btn-primary" type="submit"  onclick="agregarUsuario()"   id="sueldo">Enviar</button>
+          <button   class="btn btn-primary" type="button"  value="Enviar" onclick="agregarUsuario()"   id="send">Enviar</button>
          
         </div>
         <div class="d-grid gap-2 col-3 mx-auto">
-          <button   class="btn btn-primary" type="text"  onclick="guardarUsuario()"   id="save">guardar</button>
+          <button   class="btn btn-primary" type="text"  onclick="mostrarListado()"   id="save">Guardar</button>
          
         </div>
         <div id="datos">
@@ -116,7 +115,7 @@
         <label for="basic-url" class="form-label">Monto a cobrar de Horas Extras</label>
         <div class="input-group mb-3">
           <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="totalex">
+          <span type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="totalex"></span>
         </div>
         <div class="d-grid gap-2 col-3 mx-auto">
           <button class="btn btn-primary" type="button" id="boton50">Calcular</button>
@@ -132,7 +131,7 @@
         <label for="basic-url" class="form-label">Monto a cobrar de Horas Extras</label>
         <div class="input-group mb-1">
           <span class="input-group-text">$</span>
-          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="totalex2">
+          <span type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="totalex2"></span>
         </div>
         <div class="d-grid gap-2 col-3 mx-auto">
           <button class="btn btn-primary" type="button" id="boton100">Calcular</button>

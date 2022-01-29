@@ -71,8 +71,10 @@ img{
     display: flex;
     
 }
-.btn #save{
+#save{
     float: right;
+    margin-top: 10px;
+
 }
 .form-control {
     width: 50%;

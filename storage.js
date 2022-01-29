@@ -1,4 +1,5 @@
 
+let listaUsuario= [];
 
   class nuevoUsuario{
     user =  usuarios.value;
@@ -12,22 +13,32 @@ constructor(user, dni, paga){
 
 };
 
-function guardarUsuario(){
 
-    localStorage.setItem("1", nuevoUsuario);
-
-}
 
 function agregarUsuario(){
 
     let usuario = document.getElementById("usuario");
     let dni     = document.getElementById("id");
+    let salarios = document.getElementById("salario");
 
-    nuevoUsuario.push(new usuario(usuario.value , dni.value));
-    console.log(nuevoUsuario);
+    listaUsuario.push(new nuevoUsuario(usuario.value , dni.value, salarios.value));
+    let usuarioJSON = JSON.stringify(listaUsuario);
+    localStorage.setItem("usuario", usuarioJSON);
+    console.log(listaUsuario);
 };
 
+function mostrarListado(){
+    let infoUsuarios = JSON.parse(localStorage.getItem("usuario"));
 
+    for(let usuario of infoUsuarios){
+        console.log("El usuario es: "+ usuario.nombre);
+        console.log("Y el Dni es:" + usuario.dni);
+        console.log("Salario mensual de:" + usuario.salarios);
+
+    }
+
+
+};
 
 
 
