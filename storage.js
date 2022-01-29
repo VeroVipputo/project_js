@@ -31,9 +31,9 @@ function mostrarListado(){
     let infoUsuarios = JSON.parse(localStorage.getItem("usuario"));
 
     for(let usuario of infoUsuarios){
-        console.log("El usuario es: "+ usuario.nombre);
+        console.log("El usuario es: "+ usuario.usuarios);
         console.log("Y el Dni es:" + usuario.dni);
-        console.log("Salario mensual de:" + usuario.salarios);
+        console.log("Salario mensual de:" + usuario.salario);
 
     }
 

@@ -84,11 +84,18 @@ img{
     font-size: 24px;
     
 }
+
 #datos{
+    font-size: 1rem;
+    border: 2px solid green;
+    width: 80%;
+    height:fit-content;
+    margin: 15px;
     padding: 8px;
     justify-content: center;
+    background-color:lightgray;
+    
 }
-
 .grilla{
     display: grid;
     grid-template-columns: 20% 15% 10% 25% 15% 15% ;
