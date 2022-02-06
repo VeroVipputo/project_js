@@ -22,7 +22,6 @@ logueado.textContent= ` ${usuarios}, Sus resultados puede verlos calculados en e
 
 
 
-
 let resultado;
 let nombreUsuario = [];
 let container = document.querySelector("#dias");

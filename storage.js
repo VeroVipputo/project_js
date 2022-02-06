@@ -1,22 +1,23 @@
 
+
 let listaUsuario= [];
 
   class nuevoUsuario{
-    user =  usuarios.value;
-    dni     = id.value;
-    paga= salarios.value;
-constructor(user, dni, paga){
-    this.user = user;
-    this.dni     = dni;
-    this.paga = paga;
-}
-
-};
-
-
-
-function agregarUsuario(){
-
+      user =  usuarios.value;
+      dni     = id.value;
+      paga= salarios.value;
+      constructor(user, dni, paga){
+          this.user = user;
+          this.dni     = dni;
+          this.paga = paga;
+        }
+        
+    };
+    
+    
+    
+    function agregarUsuario(){
+        
     let usuario = document.getElementById("usuario");
     let dni     = document.getElementById("id");
     let salarios = document.getElementById("salario");
@@ -36,6 +37,7 @@ function mostrarListado(){
         console.log("Salario mensual de:" + usuario.salario);
 
     }
+    console.log(infoUsuarios);
 
 
 };
